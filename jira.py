@@ -6,7 +6,7 @@ import requests
 
 
 class JiraRequest(object):
-    base = 'https://jira.markit.com/rest/api/latest'
+    base = os.getenv('JIRA_HTTP_URL')
     header = {'content-type': 'application/json'}
     auth = ('user.name', 'password')
 
